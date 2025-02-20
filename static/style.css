@@ -1,0 +1,174 @@
+/* Root Variables */
+:root {
+    /* Farbvariablen */
+    --color-light-silver: rgba(242, 242, 242, 1); /* Sehr helles silber */
+    --color-dark-blue-black: rgba(9, 15, 26, 1); /* Tiefes blauschwarz */
+    
+    --color-primary: rgba(242, 4, 24, 1); /* Akzentfarbe */
+    --color-secondary: rgba(4, 156, 216, 1); /* Sekundärfarbe */
+    
+    /* Schriftvariablen */
+    --font-main: 'Epilogue', sans-serif;
+    --font-heading: 'Epilogue', sans-serif;
+    --font-weight-light: 250;
+    --font-weight-normal: 500;
+    --font-weight-bold: 900;
+    --font-italic: italic;
+    
+    /* Hintergrund für Nachtmodus */
+    --bg-night: var(--color-dark-blue-blackk);
+    --bg-day: var(--color-light-silver);
+    --text-night: var(--color-light-silver); 
+    --text-day: var(--color-dark-blue-black);
+  }
+  
+  /* General Styles */
+  body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-day); /* Standard Daymode */
+    color: var(--text-day);
+    transition: all 0.3s ease;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Day & Night Mode */
+  body[data-mode="night"] {
+    background-color: var(--bg-night);
+    color: var(--text-night);
+  }
+  
+  body[data-mode="night"] .container {
+    background-color: var(--bg-night);
+  }
+  
+  /* Button Styles */
+  button {
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-normal);
+    padding: 12px 20px;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  /* Header Styles */
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    margin: 20px 0;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    background: var(--color-gradient-light);
+    color: white;
+    padding: 10px;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+  
+  /* Paragraph Styles */
+  p {
+    font-weight: var(--font-weight-normal);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  p.small {
+    font-size: 0.875rem;
+  }
+  
+  label {
+    font-weight: var(--font-weight-normal);
+    font-size: 1rem;
+  }
+  
+  /* Input and Textarea Styles */
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: var(--color-primary);
+  }
+  
+  /* Container Styles */
+  .container-box {
+    background: var(--color-gradient-dark-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container-box-dark {
+    background: var(--color-gradient-light-dark);
+    color: white;
+  }
+  
+  /* Links */
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--color-secondary);
+  }
+  
+  /* Utility Classes */
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .italic {
+    font-style: var(--font-italic);
+  }
+  
+  .weight-light {
+    font-weight: var(--font-weight-light);
+  }
+  
+  .weight-bold {
+    font-weight: var(--font-weight-bold);
+  }
+  
+  /* Transitions for Modes */
+  [data-mode="night"] h1,
+  [data-mode="night"] h2,
+  [data-mode="night"] h3,
+  [data-mode="night"] h4 {
+    color: var(--text-night);
+  }
