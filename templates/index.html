@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="static/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<header></header>
 <body>
-        <div class="content reader">
+    <header></header>
+    <main>
+        <div class="content intro">
             <h2>Studio Sen Blog</h2>
-            <p>Dies ist ein Beispieltext, der sich je nach Modus anpasst.</p>
+            <p class="italic">At Studio Sen, we believe in the power of mindful creativity—where design, innovation, and personal well-being come together. Our blog is a reflection of this philosophy, filled with articles that explore mindful work, creative strategies, and the art of living with purpose.
+
+Whether you’re looking for insights on mindfulness in the workplace, personal growth, or creative storytelling, our articles are here to inspire and guide you. Take a deep breath, slow down, and explore a world where creativity flows with intention.</p>
         </div>
 
-<footer></footer>
-<script src="static/layout.js" defer></script>
-<script src="static/toggle_design.js" defer></script>
+        {% if articles %}
+            {% for article in articles %}
+                <div class="content article">
+                    <h3>{{ article.title }}</h3>
+                    <p class="italic">{{ article.short_version }}</p>
+                    <p>{{ article.content }}</p>
+                    <p class="weight-light author">By {{ article.author }} on {{ article.date }}</p>
+                    <button onclick="window.location.href='/delete/{{ article.id }}'" type="button">Delete</button>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No articles found.</p>
+        {% endif %}
+    </main>
+    <footer></footer>
+    <script src="static/layout.js" defer></script>
+    <script src="static/toggle_design.js" defer></script>
 </body>
 </html>

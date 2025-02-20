@@ -72,7 +72,11 @@ input, textarea, select {
     border: 2px solid var(--text-day);
     border-radius: 0;
     transition: all 0.3s ease;
-}
+    }
+
+.keywords-container {
+    padding-bottom: 1em;
+    }
 
 :root[data-mode="night"] input,
 :root[data-mode="night"] textarea,
@@ -80,9 +84,9 @@ input, textarea, select {
     background: var(--bg-night);
     color: var(--text-night);
     border-color: var(--text-night);
-}
+    }
 
-button[type="submit"] {
+button[type="submit"], button{
     background: var(--text-day);
     color: var(--bg-day);
     border: none;
@@ -93,26 +97,42 @@ button[type="submit"] {
     transition: all 0.3s ease;
 }
 
-:root[data-mode="night"] button[type="submit"] {
+:root[data-mode="night"] button[type="submit"], :root[data-mode="night"] button {
     background: var(--text-night);
     color: var(--bg-night);
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover, button:hover {
     background: var(--color-primary);
     color: var(--bg-day);
 }
 
 /* Container and Content */
+
+.intro {
+    margin-bottom: 10em;
+}
+
 .content {
-    max-width: 800px;
-    margin: 0 auto;s
+    max-width: 640px;
+    margin: 0 auto 4rem auto;
     padding: 0 2rem;
 }
 
 .reader {
-       min-height: 80vh;
+     min-height: 80vh;
 }
+
+.article{
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border: 2px solid var(--text-day);
+}
+
+.author {
+    color: var(--color-primary);
+}
+
 
 /* Typography */
 h1, h2, h3, h4 {
