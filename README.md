@@ -57,7 +57,7 @@ Studio Sen Blog is a web application that allows users to create, update, and de
 
 1. Run the Flask application:
     ```sh
-    flask run
+    python3 app.py
     ```
 2. Open your web browser and navigate to `http://127.0.0.1:5000`.
 
