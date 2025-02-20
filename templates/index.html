@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,7 +29,8 @@ Whether you’re looking for insights on mindfulness in the workplace, personal 
         {% endif %}
     </main>
     <footer></footer>
-    <script src="static/layout.js" defer></script>
-    <script src="static/toggle_design.js" defer></script>
+<script src="{{ url_for('static', filename='add.js') }}" defer></script>
+<script src="{{ url_for('static', filename='layout.js') }}" defer></script>
+<script src="{{ url_for('static', filename='toggle_design.js') }}" defer></script>
 </body>
 </html>
