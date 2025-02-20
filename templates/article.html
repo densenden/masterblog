@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>{{ post.title }}</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+        </head>
+        <body>
+        <header></header>
+        <main>
+            <div class="content reader">
+                <button onclick="window.location.href='/update/{{ post.id }}'" type="button" class="slim">Update</button>
+                <button onclick="window.location.href='/delete/{{ post.id }}'" type="button" class="slim del">Delete</button>
+                <button onclick="window.location.href='/article/{{ post.id - 1 }}'" type="button" class="slim">Previous</button>
+                <button onclick="window.location.href='/article/{{ post.id + 1 }}'" type="button" class="slim">Next</button>
+
+                <h1>{{ post.title }}</h1>
+                <p class="weight-light author">By {{ post.author }} on {{ post.date }}</p>
+                <p>{{ post.content }}</p>
+
+            </div>
+        </main>
+        <footer></footer>
+        <script>
+            const headerUrl = "{{ url_for('static', filename='../static/header.html') }}";
+            const footerUrl = "{{ url_for('static', filename='../static/footer.html') }}";
+        </script>
+        <script src="{{ url_for('static', filename='add.js') }}" defer></script>
+        <script src="{{ url_for('static', filename='layout.js') }}" defer></script>
+        <script src="{{ url_for('static', filename='toggle_design.js') }}" defer></script>
+        </body>
+        </html>

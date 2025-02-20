@@ -10,8 +10,7 @@
         <div class="content intro">
             <h2>Studio Sen Blog</h2>
             <p class="italic">At Studio Sen, we believe in the power of mindful creativity—where design, innovation, and personal well-being come together. Our blog is a reflection of this philosophy, filled with articles that explore mindful work, creative strategies, and the art of living with purpose.
-
-Whether you’re looking for insights on mindfulness in the workplace, personal growth, or creative storytelling, our articles are here to inspire and guide you. Take a deep breath, slow down, and explore a world where creativity flows with intention.</p>
+                Whether you’re looking for insights on mindfulness in the workplace, personal growth, or creative storytelling, our articles are here to inspire and guide you. Take a deep breath, slow down, and explore a world where creativity flows with intention.</p>
         </div>
 
         {% if articles %}
@@ -21,7 +20,9 @@ Whether you’re looking for insights on mindfulness in the workplace, personal 
                     <p class="italic">{{ article.short_version }}</p>
                     <p>{{ article.content }}</p>
                     <p class="weight-light author">By {{ article.author }} on {{ article.date }}</p>
-                    <button onclick="window.location.href='/delete/{{ article.id }}'" type="button">Delete</button>
+                    <button onclick="window.location.href='/article/{{ article.id }}'" type="button">Read</button>
+                    <button onclick="window.location.href='/delete/{{ article.id }}'" type="button" class="del">Delete</button>
+
                 </div>
             {% endfor %}
         {% else %}
