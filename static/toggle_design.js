@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-                                               fetch("static/header.html")
+                                               fetch(headerUrl)
                                                    .then(response => response.text())
                                                    .then(data => {
                                                        document.querySelector("header").innerHTML = data;
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                    })
                                                    .catch(error => console.error("Error loading header:", error));
 
-                                               fetch("static/footer.html")
+                                               fetch(footerUrl  )
                                                    .then(response => response.text())
                                                    .then(data => document.querySelector("footer").innerHTML = data)
                                                    .catch(error => console.error("Error loading footer:", error));

@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="static/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
-
+    <title>Update</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header></header>
@@ -16,7 +15,6 @@
         <input type="text" name="title" placeholder="Title" value="{{ post.title }}" required>
         <input type="text" name="author" placeholder="Author" value="{{ post.author }}" required>
         <input type="date" name="date" value="{{ post.date }}" required>
-        <textarea name="short_version" placeholder="Short Description" required>{{ post.short_version }}</textarea>
         <textarea name="content" placeholder="Content" required>{{ post.content }}</textarea>
         <input type="url" name="image" placeholder="Image URL" value="{{ post.image }}">
 
@@ -31,8 +29,12 @@
 </html>
 
 <footer></footer>
-<script src="static/add.js" defer></script>
-<script src="static/layout.js" defer></script>
-<script src="static/toggle_design.js" defer></script>
+<script>
+    const headerUrl = "{{ url_for('static', filename='../static/header.html') }}";
+    const footerUrl = "{{ url_for('static', filename='../static/footer.html') }}";
+</script>
+<script src="{{ url_for('static', filename='add.js') }}" defer></script>
+<script src="{{ url_for('static', filename='layout.js') }}" defer></script>
+<script src="{{ url_for('static', filename='toggle_design.js') }}" defer></script>
 </body>
 </html>

@@ -31,6 +31,10 @@
 </html>
 
 <footer></footer>
+<script>
+    const headerUrl = "{{ url_for('static', filename='../static/header.html') }}";
+    const footerUrl = "{{ url_for('static', filename='../static/footer.html') }}";
+</script>
 <script src="{{ url_for('static', filename='add.js') }}" defer></script>
 <script src="{{ url_for('static', filename='layout.js') }}" defer></script>
 <script src="{{ url_for('static', filename='toggle_design.js') }}" defer></script>
