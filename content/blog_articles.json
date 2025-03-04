@@ -1,21 +1,5 @@
 [
     {
-        "id": 1,
-        "date": "2024-02-15",
-        "short_version": "Learn how to build a simple web app using Flask.",
-        "title": "Getting Started with Flask: A Beginner's Guide",
-        "author": "Alex Carter",
-        "content": "Flask is a lightweight Python framework for building web applications. This guide walks you through setting up a simple app, handling routes, and rendering templates.",
-        "image": "https://example.com/flask-intro.jpg",
-        "keywords": [
-            "Flask",
-            "Python",
-            "Web Development",
-            "Backend",
-            "API"
-        ]
-    },
-    {
         "id": 2,
         "date": "2024-02-12",
         "short_version": "Explore how mindfulness can enhance creativity and problem-solving.",
@@ -157,16 +141,6 @@
             "UX",
             "User Experience",
             "Creativity"
-        ]
-    },
-    {
-        "id": 11,
-        "title": "Example",
-        "content": "Long",
-        "short_version": "Short",
-        "author": "Den",
-        "keywords": [
-            "service"
         ]
     }
 ]

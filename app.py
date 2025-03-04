@@ -6,6 +6,10 @@ import shutil
 
 
 def reset_blog_articles():
+    """
+       Resets the blog articles by copying the backup file to the main file.
+       If the backup file does not exist, it prints an error message.
+    """
     backup_file = 'content/blog_articles_backup.json'
     main_file = 'content/blog_articles.json'
 
@@ -19,6 +23,9 @@ app = Flask(__name__)
 file_path = 'content/blog_articles.json'
 
 def fetch_post_by_id(post_id):
+    """
+    Fetches a blog post by its ID.
+    """
     try:
         if os.path.exists(file_path):
             with open(file_path, 'r') as file:
@@ -32,6 +39,9 @@ def fetch_post_by_id(post_id):
 
 @app.route('/')
 def hello_world():
+    """
+        Renders the home page with a list of blog articles.
+    """
     articles = []
     try:
         if os.path.exists(file_path):
@@ -45,6 +55,9 @@ def hello_world():
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
+    """
+    Handles the addition of a new blog post.
+"""
     if request.method == 'POST':
         try:
             articles = []
@@ -80,6 +93,9 @@ def add():
 
 @app.route('/delete/<int:post_id>')
 def delete(post_id):
+    """
+       Deletes a blog post by its ID.
+    """
     try:
         if os.path.exists(file_path):
             with open(file_path, 'r') as file:
@@ -97,11 +113,15 @@ def delete(post_id):
 
 @app.route('/update/<int:post_id>', methods=['GET', 'POST'])
 def update(post_id):
+    """
+    Updates a blog post by its ID.
+    """
     if request.method == 'POST':
         try:
             with open(file_path, 'r') as file:
                 articles = json.load(file)
             print(f"Loaded articles: {articles}")
+
 
             for article in articles:
                 if article.get('id') == post_id:
@@ -132,12 +152,18 @@ def update(post_id):
 
 @app.route('/article/<int:post_id>')
 def view_article(post_id):
+    """
+    Renders a blog post by its ID.
+    """
     post = fetch_post_by_id(post_id)
     if post is None:
         return "Post not found", 404
     return render_template('article.html', post=post)
 
 def main():
+    """
+    Resets blog articles and starts the Flask app.
+    """
     reset_blog_articles()
     app.run(host="127.0.0.1", port=5000, debug=True)
 
