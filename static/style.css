@@ -1,0 +1,194 @@
+/* Root Variables */
+:root {
+    --color-light-silver: rgba(230, 230, 230, 1);
+    --color-dark-blue-black: rgba(9, 9, 14, 1);
+    --color-primary: rgba(242, 4, 24, 1);
+    --color-secondary: rgba(4, 156, 216, 1);
+
+    --font-main: 'Vollkorn', serif;
+    --font-heading: 'Vollkorn', serif;
+    --font-weight-light: 100;
+    --font-weight-normal: 400;
+    --font-weight-bold: 900;
+    --font-italic: italic;
+
+    --bg-night: var(--color-dark-blue-black);
+    --bg-day: var(--color-light-silver);
+    --text-night: var(--color-light-silver);
+    --text-day: var(--color-dark-blue-black);
+
+    background-color: var(--bg-day);
+    color: var(--text-day);
+}
+
+/* Layout */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Header and Footer Base Styles */
+header, footer {
+    background-color: var(--text-day);
+    color: var(--bg-day);
+    height: 4vh;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Dark Mode Styles */
+:root[data-mode="night"] {
+    background-color: var(--bg-night);
+    color: var(--text-night);
+}
+
+:root[data-mode="night"] header,
+:root[data-mode="night"] footer {
+    background-color: var(--text-night);
+    color: var(--bg-night);
+}
+
+/* Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0 1.5rem;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    background: var(--bg-day);
+    color: var(--text-day);
+    border: 2px solid var(--text-day);
+    border-radius: 0;
+    transition: all 0.3s ease;
+    }
+
+.large {
+    min-height: 10rem;
+}
+
+
+.keywords-container {
+    padding-bottom: 1em;
+    }
+
+:root[data-mode="night"] input,
+:root[data-mode="night"] textarea,
+:root[data-mode="night"] select {
+    background: var(--bg-night);
+    color: var(--text-night);
+    border-color: var(--text-night);
+    }
+
+button[type="submit"], button{
+    background: var(--text-day);
+    color: var(--bg-day);
+    border: none;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    cursor: pointer;
+    width: 8rem;
+    transition: all 0.3s ease;
+}
+
+.del {
+    background: var(--color-primary) !important;
+   }
+
+.slim {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-light);
+    }
+
+:root[data-mode="night"] button[type="submit"], :root[data-mode="night"] button {
+    background: var(--text-night);
+    color: var(--bg-night);
+}
+
+button[type="submit"]:hover, button:hover {
+    background: var(--color-primary);
+    color: var(--bg-day);
+}
+
+/* Container and Content */
+
+.intro {
+    margin-bottom: 10em;
+}
+
+.content {
+    max-width: 640px;
+    margin: 0 auto 4rem auto;
+    padding: 0 2rem;
+}
+
+.nav {
+    max-width: 640px;
+    margin: 0 auto 0 auto;
+    padding: 1rem 0;
+}
+
+.reader {
+     min-height: 80vh;
+}
+
+:root[data-mode="day"] .article, .article {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border: 2px solid var(--text-day);
+}
+
+:root[data-mode="night"] .article {
+    border: 2px solid var(--text-night);
+},
+
+
+.author {
+    color: var(--color-primary);
+}
+
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    margin: 1.5rem 0;
+}
+
+h1 { font-size: 3rem; letter-spacing: -0.1rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    font-weight: var(--font-weight-normal);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+/* Mode Toggle */
+.mode-toggle-label {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+/* Utility Classes */
+.text-uppercase { text-transform: uppercase; }
+.italic { font-style: var(--font-italic); }
+.weight-light { font-weight: var(--font-weight-light); }
+.weight-bold { font-weight: var(--font-weight-bold); }

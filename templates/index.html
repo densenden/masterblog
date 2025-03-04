@@ -1,0 +1,41 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="content intro">
+            <h2>Studio Sen Blog</h2>
+            <p class="italic">At Studio Sen, we believe in the power of mindful creativity—where design, innovation, and personal well-being come together. Our blog is a reflection of this philosophy, filled with articles that explore mindful work, creative strategies, and the art of living with purpose.
+                Whether you’re looking for insights on mindfulness in the workplace, personal growth, or creative storytelling, our articles are here to inspire and guide you. Take a deep breath, slow down, and explore a world where creativity flows with intention.</p>
+        </div>
+
+        {% if articles %}
+            {% for article in articles %}
+                <div class="content article">
+                    <h3>{{ article.title }}</h3>
+                    <p class="italic">{{ article.short_version }}</p>
+                    <p>{{ article.content }}</p>
+                    <p class="weight-light author">By {{ article.author }} on {{ article.date }}</p>
+                    <button onclick="window.location.href='/article/{{ article.id }}'" type="button">Read</button>
+                    <button onclick="window.location.href='/delete/{{ article.id }}'" type="button" class="del">Delete</button>
+
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No articles found.</p>
+        {% endif %}
+    </main>
+    <footer></footer>
+<script>
+    const headerUrl = "{{ url_for('static', filename='../static/header.html') }}";
+    const footerUrl = "{{ url_for('static', filename='../static/footer.html') }}";
+</script>
+<script src="{{ url_for('static', filename='add.js') }}" defer></script>
+<script src="{{ url_for('static', filename='layout.js') }}" defer></script>
+<script src="{{ url_for('static', filename='toggle_design.js') }}" defer></script>
+</body>
+</html>

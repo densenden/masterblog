@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header></header>
+<div class="content reader">
+        <h2>Add New Blog Post</h2>
+
+    <form id="blogForm">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <input type="date" name="date" required>
+        <textarea name="short_version" placeholder="Short Description" required></textarea>
+        <textarea name="content" placeholder="Content" required></textarea>
+        <input type="url" name="image" placeholder="Image URL">
+
+        <input type="text" id="keywordsInput" placeholder="Enter keywords, separated by commas">
+        <div class="keywords-container" id="keywordsContainer"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+<footer></footer>
+<script>
+    const headerUrl = "{{ url_for('static', filename='../static/header.html') }}";
+    const footerUrl = "{{ url_for('static', filename='../static/footer.html') }}";
+</script>
+<script src="{{ url_for('static', filename='add.js') }}" defer></script>
+<script src="{{ url_for('static', filename='layout.js') }}" defer></script>
+<script src="{{ url_for('static', filename='toggle_design.js') }}" defer></script>
+</body>
+</html>
