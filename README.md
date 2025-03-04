@@ -1,6 +1,8 @@
 # Studio Sen Blog
 
 Studio Sen Blog is a web application that allows users to create, update, and delete blog posts. The application is built using Python and JavaScript, with Flask as the web framework.
+<img width="1544" alt="Bildschirmfoto 2025-02-20 um 20 11 17" src="https://github.com/user-attachments/assets/6f34d56a-20d7-460e-be2a-38b1bd752182" />
+<img width="1544" alt="Bildschirmfoto 2025-02-20 um 20 11 22" src="https://github.com/user-attachments/assets/34da4598-ae81-43b2-b9a9-3230f1ae90a2" />
 
 ## Features
 
@@ -17,6 +19,11 @@ Studio Sen Blog is a web application that allows users to create, update, and de
 - JavaScript
 - HTML
 - CSS
+
+<img width="1544" alt="Bildschirmfoto 2025-02-20 um 20 11 28" src="https://github.com/user-attachments/assets/fd2f1219-829d-416a-8aff-bcffb4a8fa34" />
+<img width="1544" alt="Bildschirmfoto 2025-02-20 um 20 11 24" src="https://github.com/user-attachments/assets/769588d0-5eea-402d-bccb-2e91c6a35a53" />
+
+
 
 ## Installation
 
@@ -50,7 +57,7 @@ Studio Sen Blog is a web application that allows users to create, update, and de
 
 1. Run the Flask application:
     ```sh
-    flask run
+    python3 app.py
     ```
 2. Open your web browser and navigate to `http://127.0.0.1:5000`.
 
