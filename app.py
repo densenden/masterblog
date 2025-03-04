@@ -46,8 +46,35 @@ def hello_world():
 @app.route('/add', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
-        # We will fill this in the next step
-        pass
+        try:
+            articles = []
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as file:
+                    articles = json.load(file)
+
+            new_id = max([article.get('id', 0) for article in articles], default=0) + 1
+
+            new_article = {
+                'id': new_id,
+                'title': request.form['title'],
+                'content': request.form['content'],
+                'short_version': request.form['short_version'],
+                'author': request.form['author'],
+                'keywords': request.form.get('keywords', '').split(',')
+            }
+
+            articles.append(new_article)
+
+            with open(file_path, 'w') as file:
+                json.dump(articles, file, indent=4)
+
+            return redirect('/')
+
+        except Exception as e:
+            print(f"Error adding post: {e}")
+            return "Error adding post", 500
+
+    return render_template('add.html')
     return render_template('add.html')
 
 

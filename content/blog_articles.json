@@ -7,7 +7,13 @@
         "author": "Alex Carter",
         "content": "Flask is a lightweight Python framework for building web applications. This guide walks you through setting up a simple app, handling routes, and rendering templates.",
         "image": "https://example.com/flask-intro.jpg",
-        "keywords": ["Flask", "Python", "Web Development", "Backend", "API"]
+        "keywords": [
+            "Flask",
+            "Python",
+            "Web Development",
+            "Backend",
+            "API"
+        ]
     },
     {
         "id": 2,
@@ -17,7 +23,13 @@
         "author": "Sophie Kim",
         "content": "Practicing mindfulness can improve focus, reduce stress, and enhance creativity. Learn techniques that help creatives stay in flow and develop fresh ideas.",
         "image": "https://example.com/mindful-creativity.jpg",
-        "keywords": ["Mindfulness", "Creativity", "Focus", "Well-being", "Innovation"]
+        "keywords": [
+            "Mindfulness",
+            "Creativity",
+            "Focus",
+            "Well-being",
+            "Innovation"
+        ]
     },
     {
         "id": 3,
@@ -27,7 +39,13 @@
         "author": "John Doe",
         "content": "Python's simplicity and versatility make it an ideal language for new developers. Discover its key features and why it's used in AI, data science, and web development.",
         "image": "https://example.com/python-beginners.jpg",
-        "keywords": ["Python", "Programming", "Beginner-friendly", "Coding", "AI"]
+        "keywords": [
+            "Python",
+            "Programming",
+            "Beginner-friendly",
+            "Coding",
+            "AI"
+        ]
     },
     {
         "id": 4,
@@ -37,7 +55,13 @@
         "author": "Emma Li",
         "content": "Learn how to implement user authentication in Flask using Flask-Login, hashing passwords, and securing sessions.",
         "image": "https://example.com/flask-auth.jpg",
-        "keywords": ["Flask", "Authentication", "Security", "Web Development", "Python"]
+        "keywords": [
+            "Flask",
+            "Authentication",
+            "Security",
+            "Web Development",
+            "Python"
+        ]
     },
     {
         "id": 5,
@@ -47,7 +71,13 @@
         "author": "Michael Chen",
         "content": "With constant notifications and digital overload, it's easy to lose focus. Learn how to cultivate mindfulness in your digital life and improve productivity.",
         "image": "https://example.com/digital-mindfulness.jpg",
-        "keywords": ["Mindfulness", "Productivity", "Focus", "Well-being", "Digital Detox"]
+        "keywords": [
+            "Mindfulness",
+            "Productivity",
+            "Focus",
+            "Well-being",
+            "Digital Detox"
+        ]
     },
     {
         "id": 6,
@@ -55,9 +85,15 @@
         "short_version": "Explore Flask extensions that make development easier.",
         "title": "Top Flask Extensions Every Developer Should Know",
         "author": "Sarah Green",
-        "content": "Flask’s flexibility allows developers to extend its functionality. This article covers must-know extensions like Flask-SQLAlchemy, Flask-WTF, and Flask-Login.",
+        "content": "Flask\u2019s flexibility allows developers to extend its functionality. This article covers must-know extensions like Flask-SQLAlchemy, Flask-WTF, and Flask-Login.",
         "image": "https://example.com/flask-extensions.jpg",
-        "keywords": ["Flask", "Extensions", "Web Development", "Python", "Best Practices"]
+        "keywords": [
+            "Flask",
+            "Extensions",
+            "Web Development",
+            "Python",
+            "Best Practices"
+        ]
     },
     {
         "id": 7,
@@ -67,7 +103,13 @@
         "author": "David Brown",
         "content": "Python is the go-to language for AI development, powering machine learning models, automation, and big data analytics.",
         "image": "https://example.com/python-ai.jpg",
-        "keywords": ["Python", "AI", "Machine Learning", "Data Science", "Automation"]
+        "keywords": [
+            "Python",
+            "AI",
+            "Machine Learning",
+            "Data Science",
+            "Automation"
+        ]
     },
     {
         "id": 8,
@@ -77,7 +119,13 @@
         "author": "Lena Walker",
         "content": "Starting your day with mindfulness practices like meditation and journaling can set the tone for focus and creativity.",
         "image": "https://example.com/morning-mindfulness.jpg",
-        "keywords": ["Mindfulness", "Morning Routine", "Productivity", "Well-being", "Self-Care"]
+        "keywords": [
+            "Mindfulness",
+            "Morning Routine",
+            "Productivity",
+            "Well-being",
+            "Self-Care"
+        ]
     },
     {
         "id": 9,
@@ -87,7 +135,13 @@
         "author": "Tom Robinson",
         "content": "Flask makes it easy to create RESTful APIs with Flask-RESTful and Flask-JWT for authentication.",
         "image": "https://example.com/flask-api.jpg",
-        "keywords": ["Flask", "API", "REST", "Backend", "Web Development"]
+        "keywords": [
+            "Flask",
+            "API",
+            "REST",
+            "Backend",
+            "Web Development"
+        ]
     },
     {
         "id": 10,
@@ -97,6 +151,22 @@
         "author": "Natalie Evans",
         "content": "Mindful design focuses on empathy, simplicity, and accessibility to create intuitive user experiences.",
         "image": "https://example.com/mindful-design.jpg",
-        "keywords": ["Mindfulness", "Design", "UX", "User Experience", "Creativity"]
+        "keywords": [
+            "Mindfulness",
+            "Design",
+            "UX",
+            "User Experience",
+            "Creativity"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Example",
+        "content": "Long",
+        "short_version": "Short",
+        "author": "Den",
+        "keywords": [
+            "service"
+        ]
     }
 ]

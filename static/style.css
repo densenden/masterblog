@@ -41,6 +41,7 @@ header, footer {
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    min-height: 3rem;
 }
 
 main {
@@ -140,6 +141,8 @@ button[type="submit"]:hover, button:hover {
     max-width: 640px;
     margin: 0 auto 0 auto;
     padding: 1rem 0;
+    display: flex;
+    gap: 1rem;
 }
 
 .reader {
@@ -185,7 +188,9 @@ p {
 .mode-toggle-label {
     cursor: pointer;
     font-size: 2rem;
+    text-decoration: none;
 }
+
 
 /* Utility Classes */
 .text-uppercase { text-transform: uppercase; }
