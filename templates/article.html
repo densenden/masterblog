@@ -23,6 +23,8 @@
         {% endif %}
             </nav>
 
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="cover">
+
         <h1>{{ post.title }}</h1>
         <p class="weight-light author">Written by {{ post.author }} on {{ post.date }}{% if post.likes and post.likes > 0 %}, liked <span id="like-count">{{ post.likes }}</span> times{% else %}<span id="like-count" style="display:none;">0</span>{% endif %}.</p>
         <button id="like-button" type="button">Like</button>

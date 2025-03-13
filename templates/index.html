@@ -15,7 +15,8 @@
 
         {% if articles %}
             {% for article in articles %}
-                <div class="content article">
+
+        <div class="content article" style="background-image: url('{{ article.image }}');">
                     <h3>{{ article.title }}</h3>
                     <p class="italic">{{ article.short_version }}</p>
                     <p>{{ article.content }}</p>
