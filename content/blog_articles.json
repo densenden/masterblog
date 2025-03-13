@@ -1,5 +1,22 @@
 [
     {
+        "id": 1,
+        "date": "2024-02-15",
+        "short_version": "Learn how to build a simple web app using Flask.",
+        "title": "Getting Started with Flask: A Beginner's Guide",
+        "author": "Alex Carter",
+        "content": "Flask is a lightweight Python framework for building web applications. This guide walks you through setting up a simple app, handling routes, and rendering templates.",
+        "image": "https://example.com/flask-intro.jpg",
+        "keywords": [
+            "Flask",
+            "Python",
+            "Web Development",
+            "Backend",
+            "API"
+        ],
+        "likes": 40
+    },
+    {
         "id": 2,
         "date": "2024-02-12",
         "short_version": "Explore how mindfulness can enhance creativity and problem-solving.",
@@ -13,6 +30,23 @@
             "Focus",
             "Well-being",
             "Innovation"
+        ],
+        "likes": 17
+    },
+    {
+        "id": 3,
+        "date": "2024-02-10",
+        "short_version": "Why Python is the best programming language for beginners.",
+        "title": "Python for Beginners: Why You Should Learn It",
+        "author": "John Doe",
+        "content": "Python's simplicity and versatility make it an ideal language for new developers. Discover its key features and why it's used in AI, data science, and web development.",
+        "image": "https://example.com/python-beginners.jpg",
+        "keywords": [
+            "Python",
+            "Programming",
+            "Beginner-friendly",
+            "Coding",
+            "AI"
         ],
         "likes": 9
     },
@@ -30,7 +64,8 @@
             "Security",
             "Web Development",
             "Python"
-        ]
+        ],
+        "likes": 2
     },
     {
         "id": 5,
@@ -47,7 +82,7 @@
             "Well-being",
             "Digital Detox"
         ],
-        "likes": 4
+        "likes": 9
     },
     {
         "id": 6,
@@ -63,7 +98,8 @@
             "Web Development",
             "Python",
             "Best Practices"
-        ]
+        ],
+        "likes": 6
     },
     {
         "id": 7,
@@ -79,7 +115,8 @@
             "Machine Learning",
             "Data Science",
             "Automation"
-        ]
+        ],
+        "likes": 9
     },
     {
         "id": 8,
@@ -95,7 +132,8 @@
             "Productivity",
             "Well-being",
             "Self-Care"
-        ]
+        ],
+        "likes": 0
     },
     {
         "id": 9,
@@ -111,7 +149,8 @@
             "REST",
             "Backend",
             "Web Development"
-        ]
+        ],
+        "likes": 11
     },
     {
         "id": 10,
@@ -127,6 +166,7 @@
             "UX",
             "User Experience",
             "Creativity"
-        ]
+        ],
+        "likes": 0
     }
 ]
