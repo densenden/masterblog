@@ -19,7 +19,7 @@
                     <h3>{{ article.title }}</h3>
                     <p class="italic">{{ article.short_version }}</p>
                     <p>{{ article.content }}</p>
-                    <p class="weight-light author">By {{ article.author }} on {{ article.date }}</p>
+                    <p class="weight-light author">Written by {{ article.author }} on {{ article.date }}{% if article.likes and article.likes > 0 %}, liked <span id="like-count">{{ article.likes }}</span> times{% endif %}.</p>
                     <button onclick="window.location.href='/article/{{ article.id }}'" type="button">Read</button>
                     <button onclick="window.location.href='/delete/{{ article.id }}'" type="button" class="del">Delete</button>
 

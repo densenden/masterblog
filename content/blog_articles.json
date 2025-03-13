@@ -13,23 +13,8 @@
             "Focus",
             "Well-being",
             "Innovation"
-        ]
-    },
-    {
-        "id": 3,
-        "date": "2024-02-10",
-        "short_version": "Why Python is the best programming language for beginners.",
-        "title": "Python for Beginners: Why You Should Learn It",
-        "author": "John Doe",
-        "content": "Python's simplicity and versatility make it an ideal language for new developers. Discover its key features and why it's used in AI, data science, and web development.",
-        "image": "https://example.com/python-beginners.jpg",
-        "keywords": [
-            "Python",
-            "Programming",
-            "Beginner-friendly",
-            "Coding",
-            "AI"
-        ]
+        ],
+        "likes": 9
     },
     {
         "id": 4,
@@ -61,7 +46,8 @@
             "Focus",
             "Well-being",
             "Digital Detox"
-        ]
+        ],
+        "likes": 4
     },
     {
         "id": 6,

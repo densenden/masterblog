@@ -1,4 +1,4 @@
-from flask import render_template, Flask, request, redirect
+from flask import render_template, Flask, request, redirect, jsonify
 import json
 import os
 import shutil
@@ -18,7 +18,6 @@ def reset_blog_articles():
     else:
         print(f"Backup blog articles file {backup_file} does not exist.")
 
-
 app = Flask(__name__)
 file_path = 'content/blog_articles.json'
 
@@ -37,18 +36,20 @@ def fetch_post_by_id(post_id):
 
 
 
+
 @app.route('/')
 def hello_world():
     """
         Renders the home page with a list of blog articles.
     """
-    articles = []
-    try:
-        if os.path.exists(file_path):
-            with open(file_path, 'r') as file:
-                articles = json.load(file)
-    except Exception as e:
-        print(f"Error loading articles: {e}")
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            articles = json.load(file)
+            for article in articles:
+                if 'likes' not in article:
+                    article['likes'] = 0
+    else:
+        articles = []
 
     return render_template('index.html', articles=articles)
 
@@ -57,7 +58,7 @@ def hello_world():
 def add():
     """
     Handles the addition of a new blog post.
-"""
+    """
     if request.method == 'POST':
         try:
             articles = []
@@ -73,7 +74,8 @@ def add():
                 'content': request.form['content'],
                 'short_version': request.form['short_version'],
                 'author': request.form['author'],
-                'keywords': request.form.get('keywords', '').split(',')
+                'keywords': request.form.get('keywords', '').split(','),
+                'likes': 0  # Initialize likes to 0
             }
 
             articles.append(new_article)
@@ -87,7 +89,6 @@ def add():
             print(f"Error adding post: {e}")
             return "Error adding post", 500
 
-    return render_template('add.html')
     return render_template('add.html')
 
 
@@ -110,6 +111,7 @@ def delete(post_id):
         print(f"Error deleting post: {e}")
 
     return redirect('/')
+
 
 @app.route('/update/<int:post_id>', methods=['GET', 'POST'])
 def update(post_id):
@@ -149,7 +151,6 @@ def update(post_id):
     return render_template('update.html', post=post)
 
 
-
 @app.route('/article/<int:post_id>')
 def view_article(post_id):
     """
@@ -158,7 +159,38 @@ def view_article(post_id):
     post = fetch_post_by_id(post_id)
     if post is None:
         return "Post not found", 404
-    return render_template('article.html', post=post)
+
+    max_post_id = max(article['id'] for article in json.load(open(file_path)))
+
+    return render_template('article.html', post=post, max_post_id=max_post_id)
+
+
+@app.route('/like/<int:id>', methods=['POST'])
+def like(id):
+    """
+    Increments the 'likes' value of the post with the given ID.
+    """
+    try:
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as file:
+                articles = json.load(file)
+
+            new_like_count = 0
+            for article in articles:
+                if article.get('id') == id:
+                    article['likes'] = article.get('likes', 0) + 1
+                    new_like_count = article['likes']
+                    break
+
+            with open(file_path, 'w') as file:
+                json.dump(articles, file, indent=4)
+
+    except Exception as e:
+        print(f"Error liking post: {e}")
+        return "Error liking post", 500
+
+    return jsonify(success=True, likes=new_like_count)
+
 
 def main():
     """

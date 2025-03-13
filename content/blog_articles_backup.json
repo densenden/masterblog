@@ -7,7 +7,8 @@
         "author": "Alex Carter",
         "content": "Flask is a lightweight Python framework for building web applications. This guide walks you through setting up a simple app, handling routes, and rendering templates.",
         "image": "https://example.com/flask-intro.jpg",
-        "keywords": ["Flask", "Python", "Web Development", "Backend", "API"]
+        "keywords": ["Flask", "Python", "Web Development", "Backend", "API"],
+        "likes": 2
     },
     {
         "id": 2,
@@ -47,7 +48,8 @@
         "author": "Michael Chen",
         "content": "With constant notifications and digital overload, it's easy to lose focus. Learn how to cultivate mindfulness in your digital life and improve productivity.",
         "image": "https://example.com/digital-mindfulness.jpg",
-        "keywords": ["Mindfulness", "Productivity", "Focus", "Well-being", "Digital Detox"]
+        "keywords": ["Mindfulness", "Productivity", "Focus", "Well-being", "Digital Detox"],
+        "likes": 4
     },
     {
         "id": 6,
